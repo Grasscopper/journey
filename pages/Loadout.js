@@ -22,7 +22,7 @@ const Loadout = (props) => {
 
   return (
     <div className="columns is-multiline" style={{ padding: 20 }}>
-    <h1>LOADOUT</h1>
+    <h1>LOADOUT works on atom?</h1>
     {menuTiles}
     </div>
   )
