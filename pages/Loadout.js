@@ -22,6 +22,7 @@ const Loadout = (props) => {
 
   return (
     <div className="columns is-multiline" style={{ padding: 20 }}>
+    <h1>LOADOUT</h1>
     {menuTiles}
     </div>
   )
