@@ -1,4 +1,10 @@
 import React, { useState } from "react"
+import PrimaryWeapons from "./Loadout/PrimaryWeapons"
+import SecondaryWeapons from "./Loadout/SecondaryWeapons"
+import SupportWeapons from "./Loadout/SupportWeapons"
+import Items from "./Loadout/Items"
+import Abilities from "./Loadout/Abilities"
+
 
 const Loadout = (props) => {
   const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
@@ -20,11 +26,41 @@ const Loadout = (props) => {
     )
   })
 
+  let selectedMenu = <PrimaryWeapons />
+  if (menuItems[0]) {
+    selectedMenu = <PrimaryWeapons />
+  }
+  else if (menuItems[1]) {
+    selectedMenu = <SecondaryWeapons />
+  }
+  else if (menuItems[2]) {
+    selectedMenu = <SupportWeapons />
+  }
+  else if (menuItems[3]) {
+    selectedMenu = <Items />
+  }
+  else if (menuItems[4]) {
+    selectedMenu = <Abilities />
+  }
+
   return (
-    <div className="columns is-multiline" style={{ padding: 20 }}>
-    <h1>LOADOUT works on atom?</h1>
-    {menuTiles}
-    </div>
+    <>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">
+            Scout
+          </p>
+          <p class="subtitle">
+            Level 4
+          </p>
+        </div>
+      </section>
+      <div className="columns is-multiline" style={{ padding: 20 }}>
+      {menuTiles}
+      <div className="column is-4" />
+      {selectedMenu}
+      </div>
+    </>
   )
 }
 
