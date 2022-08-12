@@ -7,10 +7,13 @@ import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 const WeaponCard = (props) => {
   let damageTypeBackgroundColor = "#F14667"
-  if (props.damageType !== "DMG") {
+  if (props.damageType === "ITEM") {
+    damageTypeBackgroundColor = "#E87C42"
+  }
+  else if (props.damageType !== "DMG"){
     damageTypeBackgroundColor = "#79BCD2"
   }
-  
+
   return (
     <div className="column is-4" style={{  marginBottom: 10 }}>
      <div className="weapon-card-background" style={{ cursor: "pointer" }}>

@@ -14,7 +14,7 @@ const Items = (props) => {
       <div className="columns is-multiline">
         <WeaponCard
           weaponName="C. BOX (DRST)"
-          damageType="SPC"
+          damageType="ITEM"
           ammo="2"
           weight="0.5" />
       </div>
