@@ -1,4 +1,5 @@
 import React from "react"
+import WeaponCard from "./WeaponCard"
 
 const Items = (props) => {
   return (
@@ -10,9 +11,13 @@ const Items = (props) => {
           <li className="is-active"><a href="/Items" aria-current="page">ITEMS</a></li>
         </ul>
       </nav>
-      <ul>
-        <li>C. BOX (DRST)</li>
-      </ul>
+      <div className="columns is-multiline">
+        <WeaponCard
+          weaponName="C. BOX (DRST)"
+          damageType="SPC"
+          ammo="2"
+          weight="0.5" />
+      </div>
     </div>
   )
 }
