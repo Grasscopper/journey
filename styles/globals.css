@@ -12,6 +12,10 @@
   border: solid;
 }
 
+.upper-half-weapon-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
 .loadout-menu-item {
   background-color: #EFF2F8;
 }
@@ -19,6 +23,7 @@
 .loadout-menu-item:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 }
+
 
 html,
 body {
