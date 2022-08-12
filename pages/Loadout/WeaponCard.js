@@ -6,41 +6,50 @@ import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 // <FontAwesomeIcon icon={faCubes} style={{ color: "#F1EBFD", height: 30, width: 30 }} />
 
 const WeaponCard = (props) => {
+  let damageTypeBackgroundColor = "#F14667"
+  if (props.damageType === "ZZZ") {
+    damageTypeBackgroundColor = "#79BCD2"
+  }
+  if (props.damageType === "STN") {
+    damageTypeBackgroundColor = "#79BCD2"
+  }
   return (
-    <div className="column is-3" style={{  marginBottom: 10 }}>
+    <div className="column is-4" style={{  marginBottom: 10 }}>
      <div className="weapon-card-background" style={{ cursor: "pointer" }}>
-       <div className="columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 139 }}>
+       <div className="columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 179 }}>
 
-         <div className="column is-7-mobile is-7 has-text-white" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#292C2A" }}>
-           <p style={{ paddingLeft: 10, fontSize: 21, fontWeight: 700 }}>
-           WU S.PISTOL
+         <div className="column is-9-mobile is-9" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#EFF2F9", marginTop: 7, marginBottom: 18 }}>
+           <p style={{ paddingLeft: 10, fontSize: 18, fontWeight: 700 }}>
+              {props.weaponName}
            </p>
          </div>
 
-         <div className="column is-5-mobile is-5" style={{ color: "#63687E", textAlign: "right", paddingTop: 17, paddingRight: 20, backgroundColor: "#292C2A" }}>
-          <span style={{color: "black", backgroundColor: "#F14667", padding: 3, fontWeight: "bold" }}>DMG</span>
+         <div className="column is-3-mobile is-3" style={{ color: "#63687E", textAlign: "right", paddingTop: 17, paddingRight: 20, backgroundColor: "#EFF2F9", marginTop: 7, marginBottom: 18 }}>
+            <span style={{color: "white", backgroundColor: damageTypeBackgroundColor, padding: 3, fontWeight: 700 }}>
+              {props.damageType}
+            </span>
          </div>
 
-         <div className="column is-half-mobile is-6" style={{ paddingTop: 13 }}>
+         <div className="column is-half-mobile is-6" style={{ paddingTop: 8 }}>
          <span className="icon-text" style={{ paddingLeft: 10 }}>
              <span>
                  <FontAwesomeIcon icon={faCubes} style={{ color: "black", height: 30, width: 30}} />
              </span>
 
              <span style={{ marginTop: 5, marginLeft: 5, fontSize: 24 }}>
-                 7/21
+                 {props.ammo}
              </span>
          </span>
          </div>
 
-         <div className="column is-half-mobile is-6" style={{ textAlign: "right", paddingTop: 13, paddingRight: 20 }}>
+         <div className="column is-half-mobile is-6" style={{ textAlign: "right", paddingTop: 8, paddingRight: 20 }}>
             <span className="icon-text">
                 <span>
                     <FontAwesomeIcon icon={faWeightHanging} style={{ color: "black", height: 30, width: 30}} />
                 </span>
 
                 <span style={{ marginTop: 5, marginLeft: 5, fontSize: 24 }}>
-                    1.0 KG
+                    {props.weight}
                 </span>
             </span>
          </div>

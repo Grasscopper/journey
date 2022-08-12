@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 .weapon-card-background {
-  background-color: hsl(227, 47%, 96%);
+  background-color: white;
   /* border-radius: 4px; */
   border: solid;
 }
@@ -10,6 +10,14 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
   /* border-radius: 4px; */
   border: solid;
+}
+
+.loadout-menu-item {
+  background-color: #EFF2F8;
+}
+
+.loadout-menu-item:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 }
 
 html,
