@@ -11,6 +11,13 @@ const PrimaryWeapons = (props) => {
           <li className="is-active"><a href="/PrimaryWeapons" aria-current="page">PRIMARY WEAPONS</a></li>
         </ul>
       </nav>
+
+      <section className="hero" style={{ backgroundColor: "#EFF2F8", marginBottom: 30, border: "solid" }}>
+          <div className="hero-body">
+            <p className="title" style={{ color: "#4a4a4a" }}>Primary Weapons</p>
+          </div>
+      </section>
+
       <div className="columns is-multiline">
         <WeaponCard
           weaponName="AM MRS-4"
