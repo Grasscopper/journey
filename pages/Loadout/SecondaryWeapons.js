@@ -1,4 +1,5 @@
 import React from "react"
+import WeaponCard from "./WeaponCard"
 
 const SecondaryWeapons = (props) => {
   return (
@@ -10,10 +11,18 @@ const SecondaryWeapons = (props) => {
           <li className="is-active"><a href="/SecondaryWeapons" aria-current="page">SECONDARY WEAPONS</a></li>
         </ul>
       </nav>
-      <ul>
-        <li>GEIST P3</li>
-        <li>WU S. Pistol</li>
-      </ul>
+      <div className="columns is-multiline">
+        <WeaponCard
+          weaponName="GEIST P3"
+          damageType="DMG"
+          ammo="15/45"
+          weight="1.5" />
+        <WeaponCard
+          weaponName="WU S. Pistol"
+          damageType="ZZZ"
+          ammo="7/21"
+          weight="1.0" />
+      </div>
     </div>
   )
 }
