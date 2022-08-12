@@ -11,10 +11,17 @@ const Items = (props) => {
           <li className="is-active"><a href="/Items" aria-current="page">ITEMS</a></li>
         </ul>
       </nav>
+
+      <section className="hero" style={{ backgroundColor: "#EFF2F8", marginBottom: 30, border: "solid" }}>
+          <div className="hero-body">
+            <p className="title" style={{ color: "#4a4a4a" }}>Items</p>
+          </div>
+      </section>
+
       <div className="columns is-multiline">
         <WeaponCard
           weaponName="C. BOX (DRST)"
-          damageType="SPC"
+          damageType="ITEM"
           ammo="2"
           weight="0.5" />
       </div>

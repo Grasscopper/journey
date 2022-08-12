@@ -11,6 +11,13 @@ const SecondaryWeapons = (props) => {
           <li className="is-active"><a href="/SecondaryWeapons" aria-current="page">SECONDARY WEAPONS</a></li>
         </ul>
       </nav>
+
+      <section className="hero" style={{ backgroundColor: "#EFF2F8", marginBottom: 30, border: "solid" }}>
+          <div className="hero-body">
+            <p className="title" style={{ color: "#4a4a4a" }}>Secondary Weapons</p>
+          </div>
+      </section>
+
       <div className="columns is-multiline">
         <WeaponCard
           weaponName="GEIST P3"
