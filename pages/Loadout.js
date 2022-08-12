@@ -52,33 +52,33 @@ const Loadout = (props) => {
         <li className="is-active"><a href="/Loadout" aria-current="page">LOADOUT</a></li>
       </ul>
       </nav>
-      <div className="columns is-multiline">
+      <div className="columns is-multiline has-background-light">
         <Link href="/Loadout/PrimaryWeapons">
-          <div className="column is-4">
+          <div className="column is-4" style={{ border: "solid" }}>
             <a>Primary Weapons</a>
           </div>
         </Link>
         <Link href="/Loadout/SecondaryWeapons">
-          <div className="column is-4">
+          <div className="column is-4" style={{ border: "solid" }}>
             <a>Secondary Weapons</a>
           </div>
         </Link>
         <Link href="/Loadout/SupportWeapons">
-          <div className="column is-4">
+          <div className="column is-4" style={{ border: "solid" }}>
             <a>Support Weapons</a>
           </div>
         </Link>
         <Link href="/Loadout/Items">
-          <div className="column is-4">
+          <div className="column is-4" style={{ border: "solid" }}>
             <a>Items</a>
           </div>
         </Link>
         <Link href="/Loadout/Abilities">
-          <div className="column is-4">
+          <div className="column is-4" style={{ border: "solid" }}>
             <a>Abilities</a>
           </div>
         </Link>
-        <div className="column is-4" />
+        <div className="column is-4 has-background-white" />
       </div>
     </div>
   )
