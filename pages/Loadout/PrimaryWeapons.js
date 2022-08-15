@@ -4,11 +4,16 @@ import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const PrimaryWeapons = (props) => {
   let selectedPrimaryWeapon = <EmptyWeaponCard />
-  // <WeaponCard
-  //   weaponName="AM MRS-4"
-  //   damageType="DMG"
-  //   ammo="30/90"
-  //   weight="6.5" />
+  if (props.equippedPrimaryWeapon === null) {
+    selectedPrimaryWeapon = <EmptyWeaponCard />
+  }
+  else {
+    selectedPrimaryWeapon = <WeaponCard
+      weaponName={props.equippedPrimaryWeapon.weaponName}
+      damageType={props.equippedPrimaryWeapon.damageType}
+      ammo={props.equippedPrimaryWeapon.ammo}
+      weight={props.equippedPrimaryWeapon.weight} />
+  }
 
   return (
     <div>
@@ -27,11 +32,13 @@ const PrimaryWeapons = (props) => {
 
       <div className="columns is-multiline">
         <WeaponCard
+          setPrimaryWeapon={props.setPrimaryWeapon}
           weaponName="AM MRS-4"
           damageType="DMG"
           ammo="30/90"
           weight="6.5" />
         <WeaponCard
+          setPrimaryWeapon={props.setPrimaryWeapon}
           weaponName="AM MRS-71 RIFLE"
           damageType="DMG"
           ammo="10/30"

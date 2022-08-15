@@ -18,7 +18,7 @@ const Items = (props) => {
           </div>
       </section>
 
-      <p className="title" style={{ color: "#4A4A4A"}}>Select a primary weapon</p>
+      <p className="title" style={{ color: "#4A4A4A"}}>Select items</p>
 
       <div className="columns is-multiline">
       <WeaponCard

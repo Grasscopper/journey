@@ -2,7 +2,7 @@ export const Game = {
   setup: () => (
     {
       loadout: {
-        primary: {},
+        primary: null,
         secondary: {},
         support: [],
         items: [],
