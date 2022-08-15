@@ -1,20 +1,18 @@
 import React from "react"
-// import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCubes } from '@fortawesome/free-solid-svg-icons'
 import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 const WeaponCard = (props) => {
-  // const router = useRouter()
   const weapon = {
     weaponName: props.weaponName,
     damageType: props.damageType,
     ammo: props.ammo,
-    weight: props.ammo
+    weight: props.weight
   }
+
   const equipPrimaryWeapon = (event) => {
-    // event.preventDefault()
-    // router.push(weapon)
+    props.setPrimaryWeapon(weapon)
   }
 
   let damageTypeBackgroundColor = "#F14667"
@@ -27,7 +25,7 @@ const WeaponCard = (props) => {
 
   return (
     <div className="column is-4" style={{  marginBottom: 10 }}>
-     <div className="weapon-card-background" style={{ cursor: "pointer" }} onClick={equipPrimaryWeapon()}>
+     <div className="weapon-card-background" style={{ cursor: "pointer" }} onClick={equipPrimaryWeapon}>
        <div className="upper-half-weapon-card columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 179 }}>
 
          <div className="column is-9-mobile is-9" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#FEFEFE", marginTop: 7, marginBottom: 18 }}>

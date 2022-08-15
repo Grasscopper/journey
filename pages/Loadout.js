@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-// import Link from "next/link"
 import PrimaryWeapons from "./Loadout/PrimaryWeapons"
 import SecondaryWeapons from "./Loadout/SecondaryWeapons"
 import SupportWeapons from "./Loadout/SupportWeapons"
@@ -26,9 +25,12 @@ const Loadout = (props) => {
     )
   })
 
-  let selectedMenu = <PrimaryWeapons />
+  let selectedMenu = <PrimaryWeapons
+  setPrimaryWeapon={props.moves.setPrimaryWeapon} />
   if (menuItems[0]) {
-    selectedMenu = <PrimaryWeapons />
+    selectedMenu = <PrimaryWeapons
+    equippedPrimaryWeapon={props.G.loadout.primary}
+    setPrimaryWeapon={props.moves.setPrimaryWeapon} />
   }
   else if (menuItems[1]) {
     selectedMenu = <SecondaryWeapons />
