@@ -11,8 +11,8 @@ export const Game = {
     }
   ),
   moves: {
-    setPrimary: (G, ctx, primary) => {
-      G.loadout.primary = primary  
+    setPrimaryWeapon: (G, ctx, primary) => {
+      G.loadout.primary = primary
     }
     // nextDay: (G, ctx) => {
     //   G.time = 3

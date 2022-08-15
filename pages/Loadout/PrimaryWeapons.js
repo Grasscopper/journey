@@ -1,33 +1,29 @@
 import React from "react"
 import WeaponCard from "./WeaponCard"
+import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const PrimaryWeapons = (props) => {
-  return (
-    <div style={{ padding: 10 }}>
-      <nav className="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-        <ul>
-          <li><a href="/Loadout">CUSTOMIZE</a></li>
-          <li><a href="/Loadout">LOADOUT</a></li>
-          <li className="is-active"><a href="/PrimaryWeapons" aria-current="page">PRIMARY WEAPONS</a></li>
-        </ul>
-      </nav>
+  let selectedPrimaryWeapon = <EmptyWeaponCard />
+  // <WeaponCard
+  //   weaponName="AM MRS-4"
+  //   damageType="DMG"
+  //   ammo="30/90"
+  //   weight="6.5" />
 
+  return (
+    <div>
       <section className="hero" style={{ backgroundColor: "#03D1B2", marginBottom: 30, border: "solid" }}>
           <div className="hero-body">
               <p className="title" style={{ color: "white" }}>
               EQUIPPED
               </p>
               <div className="columns is-multiline">
-                <WeaponCard
-                  weaponName="AM MRS-4"
-                  damageType="DMG"
-                  ammo="30/90"
-                  weight="6.5" />
+              {selectedPrimaryWeapon}
               </div>
           </div>
       </section>
 
-      <p className="title" style={{ color: "#4A4A4A"}}>Select a primary weapon.</p>
+      <p className="title" style={{ color: "#4A4A4A"}}>Select a primary weapon</p>
 
       <div className="columns is-multiline">
         <WeaponCard

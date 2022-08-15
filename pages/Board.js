@@ -3,7 +3,7 @@ import Loadout from './Loadout'
 
 const Board = (props) => {
   return (
-    <Loadout />
+    <Loadout G={props.G} ctx={props.ctx} />
   )
 }
 

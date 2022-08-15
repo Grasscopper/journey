@@ -1,49 +1,47 @@
 import React, { useState } from "react"
-import Link from "next/link"
+// import Link from "next/link"
 import PrimaryWeapons from "./Loadout/PrimaryWeapons"
 import SecondaryWeapons from "./Loadout/SecondaryWeapons"
 import SupportWeapons from "./Loadout/SupportWeapons"
 import Items from "./Loadout/Items"
 import Abilities from "./Loadout/Abilities"
 
-
 const Loadout = (props) => {
-  debugger
-  // const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
-  // const [menuItems, setMenuItems] = useState([1,0,0,0,0])
-  // let menuCategories = menuItems.map((menuItem, index) => {
-  //   let selectedItem = [0,0,0,0,0]
-  //   selectedItem[index] = 1
-  //   if (menuItem === 1) {
-  //     return (
-  //       <div key={index} className="column has-background-primary is-4">
-  //         <p>{names[index]}</p>
-  //       </div>
-  //     )
-  //   }
-  //   return (
-  //     <div key={index} className="column is-4" onClick={() => {setMenuItems(selectedItem)}}>
-  //       <p>{names[index]}</p>
-  //     </div>
-  //   )
-  // })
+  const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
+  const [menuItems, setMenuItems] = useState([1,0,0,0,0])
+  let menuCategories = menuItems.map((menuItem, index) => {
+    let selectedItem = [0,0,0,0,0]
+    selectedItem[index] = 1
+    if (menuItem === 1) {
+      return (
+        <div key={index} className="column has-background-primary is-4" style={{ border: "solid" }}>
+          <p>{names[index]}</p>
+        </div>
+      )
+    }
+    return (
+      <div key={index} className="loadout-menu-item column is-4" onClick={() => {setMenuItems(selectedItem)}} style={{ border: "solid" }}>
+        <p>{names[index]}</p>
+      </div>
+    )
+  })
 
-  // let selectedMenu = <PrimaryWeapons />
-  // if (menuItems[0]) {
-  //   selectedMenu = <PrimaryWeapons />
-  // }
-  // else if (menuItems[1]) {
-  //   selectedMenu = <SecondaryWeapons />
-  // }
-  // else if (menuItems[2]) {
-  //   selectedMenu = <SupportWeapons />
-  // }
-  // else if (menuItems[3]) {
-  //   selectedMenu = <Items />
-  // }
-  // else if (menuItems[4]) {
-  //   selectedMenu = <Abilities />
-  // }
+  let selectedMenu = <PrimaryWeapons />
+  if (menuItems[0]) {
+    selectedMenu = <PrimaryWeapons />
+  }
+  else if (menuItems[1]) {
+    selectedMenu = <SecondaryWeapons />
+  }
+  else if (menuItems[2]) {
+    selectedMenu = <SupportWeapons />
+  }
+  else if (menuItems[3]) {
+    selectedMenu = <Items />
+  }
+  else if (menuItems[4]) {
+    selectedMenu = <Abilities />
+  }
 
   return (
     <div style={{ padding: 20 }}>
@@ -54,33 +52,10 @@ const Loadout = (props) => {
       </ul>
       </nav>
       <div className="columns is-multiline has-background-light" style={{ cursor: "pointer" }}>
-        <Link href="/Loadout/PrimaryWeapons">
-          <div className="loadout-menu-item column is-4" style={{ border: "solid" }}>
-            <a>Primary Weapons</a>
-          </div>
-        </Link>
-        <Link href="/Loadout/SecondaryWeapons">
-          <div className="loadout-menu-item column is-4" style={{ border: "solid" }}>
-            <a>Secondary Weapons</a>
-          </div>
-        </Link>
-        <Link href="/Loadout/SupportWeapons">
-          <div className="loadout-menu-item column is-4" style={{ border: "solid" }}>
-            <a>Support Weapons</a>
-          </div>
-        </Link>
-        <Link href="/Loadout/Items">
-          <div className="loadout-menu-item column is-4" style={{ border: "solid" }}>
-            <a>Items</a>
-          </div>
-        </Link>
-        <Link href="/Loadout/Abilities">
-          <div className="loadout-menu-item column is-4" style={{ border: "solid" }}>
-            <a>Abilities</a>
-          </div>
-        </Link>
+        {menuCategories}
         <div className="column is-4 has-background-white" />
       </div>
+      {selectedMenu}
     </div>
   )
 }
