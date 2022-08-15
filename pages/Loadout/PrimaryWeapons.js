@@ -3,7 +3,7 @@ import WeaponCard from "./WeaponCard"
 
 const PrimaryWeapons = (props) => {
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 10 }}>
       <nav className="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
         <ul>
           <li><a href="/Loadout">CUSTOMIZE</a></li>
@@ -12,11 +12,22 @@ const PrimaryWeapons = (props) => {
         </ul>
       </nav>
 
-      <section className="hero" style={{ backgroundColor: "#EFF2F8", marginBottom: 30, border: "solid" }}>
+      <section className="hero" style={{ backgroundColor: "#03D1B2", marginBottom: 30, border: "solid" }}>
           <div className="hero-body">
-            <p className="title" style={{ color: "#4a4a4a" }}>Primary Weapons</p>
+              <p className="title" style={{ color: "white" }}>
+              EQUIPPED
+              </p>
+              <div className="columns is-multiline">
+                <WeaponCard
+                  weaponName="AM MRS-4"
+                  damageType="DMG"
+                  ammo="30/90"
+                  weight="6.5" />
+              </div>
           </div>
       </section>
+
+      <p className="title" style={{ color: "#4A4A4A"}}>Select a primary weapon.</p>
 
       <div className="columns is-multiline">
         <WeaponCard

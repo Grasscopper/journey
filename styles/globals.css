@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 .weapon-card-background {
-  background-color: white;
+  background-color: #EFF2F9;
   /* border-radius: 4px; */
   border: solid;
 }

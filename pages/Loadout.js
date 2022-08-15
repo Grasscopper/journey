@@ -8,6 +8,7 @@ import Abilities from "./Loadout/Abilities"
 
 
 const Loadout = (props) => {
+  debugger
   // const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
   // const [menuItems, setMenuItems] = useState([1,0,0,0,0])
   // let menuCategories = menuItems.map((menuItem, index) => {

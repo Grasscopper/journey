@@ -3,7 +3,7 @@ import WeaponCard from "./WeaponCard"
 
 const Items = (props) => {
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 10 }}>
       <nav className="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
         <ul>
           <li><a href="/Loadout">CUSTOMIZE</a></li>
