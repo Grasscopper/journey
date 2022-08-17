@@ -4,6 +4,17 @@ import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const SecondaryWeapons = (props) => {
   let selectedSecondaryWeapon = <EmptyWeaponCard />
+  if (props.equippedSecondaryWeapon === null) {
+    selectedSecondaryWeapon = <EmptyWeaponCard />
+  }
+  else {
+    selectedSecondaryWeapon = <WeaponCard
+      setWeapon={props.removeSecondaryWeapon}
+      weaponName={props.equippedSecondaryWeapon.weaponName}
+      damageType={props.equippedSecondaryWeapon.damageType}
+      ammo={props.equippedSecondaryWeapon.ammo}
+      weight={props.equippedSecondaryWeapon.weight} />
+  }
 
   return (
     <div>
@@ -22,11 +33,13 @@ const SecondaryWeapons = (props) => {
 
       <div className="columns is-multiline">
         <WeaponCard
+          setWeapon={props.setSecondaryWeapon}
           weaponName="GEIST P3"
           damageType="DMG"
           ammo="15/45"
           weight="1.5" />
         <WeaponCard
+          setWeapon={props.setSecondaryWeapon}
           weaponName="WU S. Pistol"
           damageType="ZZZ"
           ammo="7/21"

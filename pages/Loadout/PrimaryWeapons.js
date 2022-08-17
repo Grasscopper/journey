@@ -9,6 +9,7 @@ const PrimaryWeapons = (props) => {
   }
   else {
     selectedPrimaryWeapon = <WeaponCard
+      setWeapon={props.removePrimaryWeapon}
       weaponName={props.equippedPrimaryWeapon.weaponName}
       damageType={props.equippedPrimaryWeapon.damageType}
       ammo={props.equippedPrimaryWeapon.ammo}
@@ -32,13 +33,13 @@ const PrimaryWeapons = (props) => {
 
       <div className="columns is-multiline">
         <WeaponCard
-          setPrimaryWeapon={props.setPrimaryWeapon}
+          setWeapon={props.setPrimaryWeapon}
           weaponName="AM MRS-4"
           damageType="DMG"
           ammo="30/90"
           weight="6.5" />
         <WeaponCard
-          setPrimaryWeapon={props.setPrimaryWeapon}
+          setWeapon={props.setPrimaryWeapon}
           weaponName="AM MRS-71 RIFLE"
           damageType="DMG"
           ammo="10/30"

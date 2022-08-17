@@ -26,14 +26,20 @@ const Loadout = (props) => {
   })
 
   let selectedMenu = <PrimaryWeapons
-  setPrimaryWeapon={props.moves.setPrimaryWeapon} />
+  equippedPrimaryWeapon={props.G.loadout.primary}
+  setPrimaryWeapon={props.moves.setPrimaryWeapon}
+  removePrimaryWeapon={props.moves.removePrimaryWeapon} />
   if (menuItems[0]) {
     selectedMenu = <PrimaryWeapons
     equippedPrimaryWeapon={props.G.loadout.primary}
-    setPrimaryWeapon={props.moves.setPrimaryWeapon} />
+    setPrimaryWeapon={props.moves.setPrimaryWeapon}
+    removePrimaryWeapon={props.moves.removePrimaryWeapon} />
   }
   else if (menuItems[1]) {
-    selectedMenu = <SecondaryWeapons />
+    selectedMenu = <SecondaryWeapons
+    equippedSecondaryWeapon={props.G.loadout.secondary}
+    setSecondaryWeapon={props.moves.setSecondaryWeapon}
+    removeSecondaryWeapon={props.moves.removeSecondaryWeapon} />
   }
   else if (menuItems[2]) {
     selectedMenu = <SupportWeapons />
