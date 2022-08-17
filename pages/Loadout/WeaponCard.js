@@ -11,8 +11,8 @@ const WeaponCard = (props) => {
     weight: props.weight
   }
 
-  const equipPrimaryWeapon = (event) => {
-    props.setPrimaryWeapon(weapon)
+  const equipWeapon = (event) => {
+    props.setWeapon(weapon)
   }
 
   let damageTypeBackgroundColor = "#F14667"
@@ -25,7 +25,7 @@ const WeaponCard = (props) => {
 
   return (
     <div className="column is-4" style={{  marginBottom: 10 }}>
-     <div className="weapon-card-background" style={{ cursor: "pointer" }} onClick={equipPrimaryWeapon}>
+     <div className="weapon-card-background" style={{ cursor: "pointer" }} onClick={equipWeapon}>
        <div className="upper-half-weapon-card columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 179 }}>
 
          <div className="column is-9-mobile is-9" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#FEFEFE", marginTop: 7, marginBottom: 18 }}>
