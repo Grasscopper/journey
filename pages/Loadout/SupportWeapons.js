@@ -4,6 +4,17 @@ import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const SupportWeapons = (props) => {
   let selectedSupportWeapon = <EmptyWeaponCard />
+  if (props.equippedSupportWeapon === null) {
+    selectedSupportWeapon = <EmptyWeaponCard />
+  }
+  else {
+    selectedSupportWeapon = <WeaponCard
+      setWeapon={props.removeSupportWeapon}
+      weaponName={props.equippedSupportWeapon.weaponName}
+      damageType={props.equippedSupportWeapon.damageType}
+      ammo={props.equippedSupportWeapon.ammo}
+      weight={props.equippedSupportWeapon.weight} />
+  }
 
   return (
     <div>
@@ -22,11 +33,13 @@ const SupportWeapons = (props) => {
 
       <div className="columns is-multiline">
       <WeaponCard
+      setWeapon={props.setSupportWeapon}
       weaponName="MAGAZINE"
       damageType="SPC"
       ammo="10"
       weight="0.2" />
       <WeaponCard
+      setWeapon={props.setSupportWeapon}
       weaponName="E.LOCATOR"
       damageType="SPC"
       ammo="3"
