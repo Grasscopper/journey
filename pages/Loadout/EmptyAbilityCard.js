@@ -2,9 +2,9 @@ import React from "react"
 
 const EmptyAbilityCard = (props) => {
   return (
-    <div className="column is-4" style={{  marginBottom: 10 }}>
-     <div className="weapon-card-background" style={{ cursor: "pointer" }}>
-       <div className="upper-half-weapon-card columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 179 }}>
+    <div className="column is-3" style={{  marginBottom: 10 }}>
+     <div className="empty-weapon-card-background">
+       <div className="columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 214 }}>
 
          <div className="column is-9-mobile is-9" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#FEFEFE", marginTop: 7, marginBottom: 18 }}>
            <p style={{ paddingLeft: 10, fontSize: 18, fontWeight: 700 }}>

@@ -3,7 +3,6 @@ import AbilityCard from "./AbilityCard"
 import EmptyAbilityCard from "./EmptyAbilityCard"
 
 const Abilities = (props) => {
-  // props.equippedAbilities
   let selectedAbility = <>
   <EmptyAbilityCard />
   <EmptyAbilityCard />
@@ -91,6 +90,46 @@ const Abilities = (props) => {
         abilityAction={props.addAbility}
         abilityName="ANTI-MARKING+"
         abilityDescription="The duration of the marker placed on the player decreases."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="WEAPONS+"
+        abilityDescription="Additional ammo for Primary and Secondary weapons."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="DEMOLITION+"
+        abilityDescription="Increased damage of all weapon explosions."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="TANK+"
+        abilityDescription="Reduced explosion damage."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="FIELD REPORT+"
+        abilityDescription="Ally and enemy death display."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="NON-LETHAL AIM+"
+        abilityDescription="Increased accuracy with non-lethal Primary and Secondary weapons."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="CQC STEALTH+"
+        abilityDescription="Faster CQC choke."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="INTERROGATION+"
+        abilityDescription="Faster interrogation."
+        abilityLevel="1" />
+        <AbilityCard
+        abilityAction={props.addAbility}
+        abilityName="FULTON+"
+        abilityDescription="Increased durability of Fulton balloons."
         abilityLevel="1" />
       </div>
     </div>
