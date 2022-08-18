@@ -2,7 +2,7 @@ import React from "react"
 
 const EmptyAbilityCard = (props) => {
   return (
-    <div className="column is-4" style={{  marginBottom: 10 }}>
+    <div className="column is-3" style={{  marginBottom: 10 }}>
      <div className="weapon-card-background" style={{ cursor: "pointer" }}>
        <div className="upper-half-weapon-card columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 179 }}>
 

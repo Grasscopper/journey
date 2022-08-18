@@ -29,7 +29,7 @@ const SupportWeapons = (props) => {
           </div>
       </section>
 
-      <p className="title" style={{ color: "#4A4A4A"}}>Select support weapons</p>
+      <p className="title" style={{ color: "#4A4A4A"}}>Select a support weapon</p>
 
       <div className="columns is-multiline">
       <WeaponCard

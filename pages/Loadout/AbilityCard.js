@@ -8,13 +8,13 @@ const AbilityCard = (props) => {
      <div className="weapon-card-background" style={{ cursor: "pointer" }}>
        <div className="upper-half-weapon-card columns is-mobile is-multiline" style={{ padding: 12, paddingTop: 5, paddingBottom: 5, minHeight: 170 }}>
 
-         <div className="column is-narrow is-6-mobile is-6" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#EFF2F9", marginTop: 7, marginBottom: 6 }}>
+         <div className="column is-narrow is-6-mobile is-6" style={{ paddingTop: 15, paddingBottom: 0, backgroundColor: "#FEFEFE", marginTop: 7, marginBottom: 6 }}>
            <p style={{ paddingLeft: 10, fontSize: 18, fontWeight: 700 }}>
               {props.abilityName}
            </p>
          </div>
 
-         <div className="column is-narrow is-6-mobile is-6" style={{ color: "#63687E", textAlign: "right", paddingTop: 14, paddingRight: 20, backgroundColor: "#EFF2F9", marginTop: 7, marginBottom: 6 }}>
+         <div className="column is-narrow is-6-mobile is-6" style={{ color: "#63687E", textAlign: "right", paddingTop: 14, paddingRight: 20, backgroundColor: "#FEFEFE", marginTop: 7, marginBottom: 6 }}>
          <span className="icon-text" style={{ backgroundColor: "white", padding: 3, paddingLeft: 10, paddingRight: 10, borderRadius: "25%/50%" }}>
              <span>
                  <FontAwesomeIcon icon={faStar} style={{ color: "black", height: 20, width: 20}} />
