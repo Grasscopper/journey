@@ -70,18 +70,46 @@ export const Game = {
       }
       else {
         if (G.loadout.support.length < 2) {
+          G.loadout = {
+            ...G.loadout,
+            weight: G.loadout.weight + support.weight
+          }
           G.loadout.support = [ ...G.loadout.support, support ]
         }
       }
     },
     removeSupportWeapon: (G, ctx, support) => {
       const result = G.loadout.support.filter(current => current.weaponName != support.weaponName)
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - support.weight
+      }
       G.loadout.support = result
     },
     setItem: (G, ctx, item) => {
+      if (G.loadout.item === null) {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + item.weight
+        }
+      }
+      else {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight - G.loadout.item.weight
+        }
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + item.weight
+        }
+      }
       G.loadout.item = item
     },
     removeItem: (G, ctx, item) => {
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - item.weight
+      }
       G.loadout.item = null
     },
     addAbility: (G, ctx, ability) => {

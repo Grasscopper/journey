@@ -81,6 +81,10 @@ const Loadout = (props) => {
     return "E"
   }
 
+  let weight = () => {
+    return (parseFloat(props.G.loadout.weight).toFixed(1))
+  }
+
   return (
     <div style={{ padding: 20 }}>
       <p className="title" style={{ color: "#4A4A4A"}}>LOADOUT</p>
@@ -130,7 +134,7 @@ const Loadout = (props) => {
                     </span>
 
                     <span style={{ marginLeft: 5, fontSize: 24 }}>
-                    <p className="title" style={{ color: "white" }}>{props.G.loadout.weight} KG</p>
+                    <p className="title" style={{ color: "white" }}>{weight()} KG</p>
                     </span>
 
                   </span>
