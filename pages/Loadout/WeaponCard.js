@@ -43,7 +43,7 @@ const WeaponCard = (props) => {
          <div className="column is-half-mobile is-6" style={{ paddingTop: 8 }}>
          <span className="icon-text" style={{ paddingLeft: 10 }}>
              <span>
-                 <FontAwesomeIcon icon={faCubes} style={{ color: "black", height: 30, width: 30}} />
+                 <FontAwesomeIcon icon={faCubes} style={{ color: "black", height: 28, width: 28}} />
              </span>
 
              <span style={{ marginTop: 5, marginLeft: 5, fontSize: 24 }}>
@@ -55,7 +55,7 @@ const WeaponCard = (props) => {
          <div className="column is-half-mobile is-6" style={{ textAlign: "right", paddingTop: 8, paddingRight: 20 }}>
             <span className="icon-text">
                 <span>
-                    <FontAwesomeIcon icon={faWeightHanging} style={{ color: "black", height: 30, width: 30}} />
+                    <FontAwesomeIcon icon={faWeightHanging} style={{ color: "black", height: 28, width: 28}} />
                 </span>
 
                 <span style={{ marginTop: 5, marginLeft: 5, fontSize: 24 }}>

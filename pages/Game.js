@@ -28,7 +28,9 @@ export const Game = {
       if (isEquipped) { // support weapon already equipped
       }
       else {
-        G.loadout.support = [ ...G.loadout.support, support ]
+        if (G.loadout.support.length < 2) {
+          G.loadout.support = [ ...G.loadout.support, support ]
+        }
       }
     },
     removeSupportWeapon: (G, ctx, support) => {
@@ -46,7 +48,9 @@ export const Game = {
       if (isEquipped) { // ability already equipped
       }
       else {
-        G.loadout.abilities = [ ...G.loadout.abilities, ability ]
+        if (G.loadout.abilities.length < 4) {
+          G.loadout.abilities = [ ...G.loadout.abilities, ability ]
+        }
       }
     },
     removeAbility: (G, ctx, ability) => {

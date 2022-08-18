@@ -50,7 +50,7 @@ const SupportWeapons = (props) => {
           </div>
       </section>
 
-      <p className="title" style={{ color: "#4A4A4A"}}>Select a support weapon</p>
+      <p className="title" style={{ color: "#4A4A4A"}}>Select support weapons</p>
 
       <div className="columns is-multiline">
       <WeaponCard
@@ -65,7 +65,18 @@ const SupportWeapons = (props) => {
       damageType="SPC"
       ammo="3"
       weight="1.0" />
-
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="HAND GRENADE"
+      damageType="DMG"
+      ammo="3"
+      weight="1.0" />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="PETROL BOMB"
+      damageType="DMG"
+      ammo="3"
+      weight="1.0" />
       </div>
     </div>
   )

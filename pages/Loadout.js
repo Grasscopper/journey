@@ -62,12 +62,7 @@ const Loadout = (props) => {
 
   return (
     <div style={{ padding: 20 }}>
-      <nav className="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-      <ul>
-        <li><a href="/Loadout">CUSTOMIZE</a></li>
-        <li className="is-active"><a href="/Loadout" aria-current="page">LOADOUT</a></li>
-      </ul>
-      </nav>
+      <p className="title" style={{ color: "#4A4A4A"}}>LOADOUT</p>
       <div className="columns is-multiline has-background-light" style={{ cursor: "pointer", margin: 0, marginBottom: 20 }}>
         {menuCategories}
         <div className="column is-4 has-background-white" />

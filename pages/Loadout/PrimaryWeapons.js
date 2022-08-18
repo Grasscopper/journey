@@ -44,6 +44,18 @@ const PrimaryWeapons = (props) => {
           damageType="DMG"
           ammo="10/30"
           weight="9.5" />
+        <WeaponCard
+          setWeapon={props.setPrimaryWeapon}
+          weaponName="LPG-61"
+          damageType="DMG"
+          ammo="100/200"
+          weight="10.2" />
+        <WeaponCard
+          setWeapon={props.setPrimaryWeapon}
+          weaponName="S1000"
+          damageType="DMG"
+          ammo="8/16"
+          weight="5.5" />
       </div>
     </div>
   )
