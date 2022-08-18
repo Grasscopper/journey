@@ -4,6 +4,17 @@ import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const Items = (props) => {
   let selectedItem = <EmptyWeaponCard />
+  if (props.equippedItem === null) {
+    selectedItem = <EmptyWeaponCard />
+  }
+  else {
+    selectedItem = <WeaponCard
+      setWeapon={props.removeItem}
+      weaponName={props.equippedItem.weaponName}
+      damageType={props.equippedItem.damageType}
+      ammo={props.equippedItem.ammo}
+      weight={props.equippedItem.weight} />
+  }
 
   return (
     <div>
@@ -22,12 +33,11 @@ const Items = (props) => {
 
       <div className="columns is-multiline">
       <WeaponCard
+      setWeapon={props.setItem}
       weaponName="C. BOX (DRST)"
       damageType="ITEM"
       ammo="2"
       weight="0.5" />
-
-
       </div>
     </div>
   )

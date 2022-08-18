@@ -5,7 +5,7 @@ export const Game = {
         primary: null,
         secondary: null,
         support: null,
-        items: [],
+        item: null,
         abilities: []
       }
     }
@@ -29,6 +29,12 @@ export const Game = {
     removeSupportWeapon: (G, ctx, support) => {
       G.loadout.support = null
     },
+    setItem: (G, ctx, item) => {
+      G.loadout.item = item
+    },
+    removeItem: (G, ctx, item) => {
+      G.loadout.item = null
+    }
     // nextDay: (G, ctx) => {
     //   G.time = 3
     //   G.day++
