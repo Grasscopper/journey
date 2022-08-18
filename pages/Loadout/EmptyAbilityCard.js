@@ -1,6 +1,6 @@
 import React from "react"
 
-const EmptyWeaponCard = (props) => {
+const EmptyAbilityCard = (props) => {
   return (
     <div className="column is-4" style={{  marginBottom: 10 }}>
      <div className="weapon-card-background" style={{ cursor: "pointer" }}>
@@ -27,4 +27,4 @@ const EmptyWeaponCard = (props) => {
   )
 }
 
-export default EmptyWeaponCard
+export default EmptyAbilityCard

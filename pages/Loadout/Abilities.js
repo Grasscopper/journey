@@ -1,9 +1,9 @@
 import React from "react"
 import AbilityCard from "./AbilityCard"
-import EmptyWeaponCard from "./EmptyWeaponCard"
+import EmptyAbilityCard from "./EmptyAbilityCard"
 
 const Abilities = (props) => {
-  let selectedAbility = <EmptyWeaponCard />
+  let selectedAbility = <EmptyAbilityCard />
 
   return (
     <div>
