@@ -4,6 +4,10 @@ import SecondaryWeapons from "./Loadout/SecondaryWeapons"
 import SupportWeapons from "./Loadout/SupportWeapons"
 import Items from "./Loadout/Items"
 import Abilities from "./Loadout/Abilities"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faRunning } from '@fortawesome/free-solid-svg-icons'
+import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 const Loadout = (props) => {
   const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
@@ -67,6 +71,56 @@ const Loadout = (props) => {
         {menuCategories}
         <div className="column is-4 has-background-white" />
       </div>
+      <section className="hero" style={{ backgroundColor: "#03D1B2", marginBottom: 30, border: "solid" }}>
+          <div className="hero-body">
+              <p className="title" style={{ color: "#4a4a4a" }}>
+              Maki
+              </p>
+              <div className="columns">
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faHeart} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>100</p>
+                    </span>
+
+                  </span>
+                </div>
+
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faRunning} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>B</p>
+                    </span>
+
+                  </span>
+                </div>
+
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faWeightHanging} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>0.0 KG</p>
+                    </span>
+
+                  </span>
+                </div>
+              </div>
+          </div>
+      </section>
       {selectedMenu}
     </div>
   )

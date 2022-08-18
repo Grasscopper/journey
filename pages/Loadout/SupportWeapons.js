@@ -61,10 +61,28 @@ const SupportWeapons = (props) => {
       weight="0.2" />
       <WeaponCard
       setWeapon={props.addSupportWeapon}
+      weaponName="SMOKE GRENADE"
+      damageType="SMK"
+      ammo="3"
+      weight="1.0" />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="STUN GRENADE"
+      damageType="STN"
+      ammo="3"
+      weight="1.0" />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
       weaponName="E.LOCATOR"
       damageType="SPC"
       ammo="3"
       weight="1.0" />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="DECOY"
+      damageType="SPC"
+      ammo="2"
+      weight="2.0" />
       <WeaponCard
       setWeapon={props.addSupportWeapon}
       weaponName="HAND GRENADE"
@@ -77,6 +95,12 @@ const SupportWeapons = (props) => {
       damageType="DMG"
       ammo="3"
       weight="1.0" />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="PLUSHY SNARE"
+      damageType="SPC"
+      ammo="2"
+      weight="1.0" />      
       </div>
     </div>
   )

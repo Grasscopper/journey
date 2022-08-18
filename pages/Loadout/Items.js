@@ -34,10 +34,16 @@ const Items = (props) => {
       <div className="columns is-multiline">
       <WeaponCard
       setWeapon={props.setItem}
-      weaponName="C. BOX (DRST)"
+      weaponName="C. BOX (DSRT)"
       damageType="ITEM"
       ammo="2"
       weight="0.5" />
+      <WeaponCard
+      setWeapon={props.setItem}
+      weaponName="C. BOX (RAIN)"
+      damageType="ITEM"
+      ammo="2"
+      weight="0.6" />      
       </div>
     </div>
   )

@@ -56,6 +56,24 @@ const PrimaryWeapons = (props) => {
           damageType="DMG"
           ammo="8/16"
           weight="5.5" />
+        <WeaponCard
+          setWeapon={props.setPrimaryWeapon}
+          weaponName="UN-ARC-NL"
+          damageType="STN"
+          ammo="20/60"
+          weight="7.3" />    
+        <WeaponCard
+          setWeapon={props.setPrimaryWeapon}
+          weaponName="RENOV-ICKX TP"
+          damageType="ZZZ"
+          ammo="5/15"
+          weight="8.5" />
+        <WeaponCard
+          setWeapon={props.setPrimaryWeapon}
+          weaponName="BULLHORN SG"
+          damageType="STN"
+          ammo="9/18"
+          weight="6.8" />
       </div>
     </div>
   )
