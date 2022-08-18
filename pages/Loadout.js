@@ -4,6 +4,10 @@ import SecondaryWeapons from "./Loadout/SecondaryWeapons"
 import SupportWeapons from "./Loadout/SupportWeapons"
 import Items from "./Loadout/Items"
 import Abilities from "./Loadout/Abilities"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faRunning } from '@fortawesome/free-solid-svg-icons'
+import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 const Loadout = (props) => {
   const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
@@ -60,6 +64,23 @@ const Loadout = (props) => {
     removeAbility={props.moves.removeAbility} />
   }
 
+  let movementRank = () => {
+    const weight = props.G.loadout.weight
+    if (weight <= 6.4) {
+      return "A"
+    }
+    else if (weight >= 6.5 && weight <= 10.4) {
+      return "B"
+    }
+    else if (weight >= 10.5 && weight <= 12.4) {
+      return "C"
+    }
+    else if (weight >= 12.5) {
+      return "D"
+    }
+    return "E"
+  }
+
   return (
     <div style={{ padding: 20 }}>
       <p className="title" style={{ color: "#4A4A4A"}}>LOADOUT</p>
@@ -67,6 +88,56 @@ const Loadout = (props) => {
         {menuCategories}
         <div className="column is-4 has-background-white" />
       </div>
+      <section className="hero" style={{ backgroundColor: "#1F9CED", marginBottom: 30, border: "solid" }}>
+          <div className="hero-body">
+              <p className="title" style={{ color: "#4a4a4a" }}>
+              Maki
+              </p>
+              <div className="columns">
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faHeart} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>100</p>
+                    </span>
+
+                  </span>
+                </div>
+
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faRunning} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>{movementRank()}</p>
+                    </span>
+
+                  </span>
+                </div>
+
+                <div className="column is-4">
+                  <span className="icon-text">
+
+                    <span>
+                    <FontAwesomeIcon icon={faWeightHanging} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
+                    </span>
+
+                    <span style={{ marginLeft: 5, fontSize: 24 }}>
+                    <p className="title" style={{ color: "white" }}>{props.G.loadout.weight} KG</p>
+                    </span>
+
+                  </span>
+                </div>
+              </div>
+          </div>
+      </section>
       {selectedMenu}
     </div>
   )

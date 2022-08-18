@@ -6,21 +6,62 @@ export const Game = {
         secondary: null,
         support: [],
         item: null,
-        abilities: []
+        abilities: [],
+        weight: 0.0
       }
     }
   ),
   moves: {
     setPrimaryWeapon: (G, ctx, primary) => {
+      if (G.loadout.primary === null) {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + primary.weight
+        }
+      }
+      else {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight - G.loadout.primary.weight
+        }
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + primary.weight
+        }
+      }
       G.loadout.primary = primary
     },
     removePrimaryWeapon: (G, ctx, primary) => {
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - primary.weight
+      }
       G.loadout.primary = null
     },
     setSecondaryWeapon: (G, ctx, secondary) => {
+      if (G.loadout.secondary === null) {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + secondary.weight
+        }
+      }
+      else {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight - G.loadout.secondary.weight
+        }
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + secondary.weight
+        }
+      }
       G.loadout.secondary = secondary
     },
     removeSecondaryWeapon: (G, ctx, secondary) => {
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - secondary.weight
+      }
       G.loadout.secondary = null
     },
     addSupportWeapon: (G, ctx, support) => {
