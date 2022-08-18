@@ -54,7 +54,10 @@ const Loadout = (props) => {
     removeItem={props.moves.removeItem} />
   }
   else if (menuItems[4]) {
-    selectedMenu = <Abilities />
+    selectedMenu = <Abilities
+    equippedAbilities={props.G.loadout.abilities}
+    addAbility={props.moves.addAbility}
+    removeAbility={props.moves.removeAbility} />
   }
 
   return (
