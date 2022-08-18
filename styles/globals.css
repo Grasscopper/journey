@@ -2,13 +2,16 @@
 
 .weapon-card-background {
   background-color: #EFF2F9;
-  /* border-radius: 4px; */
   border: solid;
 }
 
 .weapon-card-background:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
-  /* border-radius: 4px; */
+  border: solid;
+}
+
+.empty-weapon-card-background {
+  background-color: #EFF2F9;
   border: solid;
 }
 

@@ -3,17 +3,38 @@ import WeaponCard from "./WeaponCard"
 import EmptyWeaponCard from "./EmptyWeaponCard"
 
 const SupportWeapons = (props) => {
-  let selectedSupportWeapon = <EmptyWeaponCard />
-  if (props.equippedSupportWeapon === null) {
-    selectedSupportWeapon = <EmptyWeaponCard />
+  let selectedSupportWeapons = <>
+  <EmptyWeaponCard />
+  <EmptyWeaponCard />
+  </>
+
+  if (props.equippedSupportWeapons.length === 0) {
+    selectedSupportWeapons = <>
+    <EmptyWeaponCard />
+    <EmptyWeaponCard />
+    </>
   }
   else {
-    selectedSupportWeapon = <WeaponCard
-      setWeapon={props.removeSupportWeapon}
-      weaponName={props.equippedSupportWeapon.weaponName}
-      damageType={props.equippedSupportWeapon.damageType}
-      ammo={props.equippedSupportWeapon.ammo}
-      weight={props.equippedSupportWeapon.weight} />
+    let supportTiles = props.equippedSupportWeapons.map((support, index) => {
+      return (
+        <WeaponCard
+        key={index}
+        setWeapon={props.removeSupportWeapon}
+        weaponName={support.weaponName}
+        damageType={support.damageType}
+        ammo={support.ammo}
+        weight={support.weight}  />
+      )
+    })
+    if (props.equippedSupportWeapons.length === 1) {
+      selectedSupportWeapons = <>
+      {supportTiles}
+      <EmptyWeaponCard />
+      </>
+    }
+    else if (props.equippedSupportWeapons.length === 2) {
+      selectedSupportWeapons = supportTiles
+    }
   }
 
   return (
@@ -24,7 +45,7 @@ const SupportWeapons = (props) => {
               EQUIPPED
               </p>
               <div className="columns is-multiline">
-              {selectedSupportWeapon}
+              {selectedSupportWeapons}
               </div>
           </div>
       </section>
@@ -33,13 +54,13 @@ const SupportWeapons = (props) => {
 
       <div className="columns is-multiline">
       <WeaponCard
-      setWeapon={props.setSupportWeapon}
+      setWeapon={props.addSupportWeapon}
       weaponName="MAGAZINE"
       damageType="SPC"
       ammo="10"
       weight="0.2" />
       <WeaponCard
-      setWeapon={props.setSupportWeapon}
+      setWeapon={props.addSupportWeapon}
       weaponName="E.LOCATOR"
       damageType="SPC"
       ammo="3"

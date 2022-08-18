@@ -3,7 +3,6 @@ import AbilityCard from "./AbilityCard"
 import EmptyAbilityCard from "./EmptyAbilityCard"
 
 const Abilities = (props) => {
-  // props.equippedAbilities
   let selectedAbility = <>
   <EmptyAbilityCard />
   <EmptyAbilityCard />

@@ -43,8 +43,8 @@ const Loadout = (props) => {
   }
   else if (menuItems[2]) {
     selectedMenu = <SupportWeapons
-    equippedSupportWeapon={props.G.loadout.support}
-    setSupportWeapon={props.moves.setSupportWeapon}
+    equippedSupportWeapons={props.G.loadout.support}
+    addSupportWeapon={props.moves.addSupportWeapon}
     removeSupportWeapon={props.moves.removeSupportWeapon} />
   }
   else if (menuItems[3]) {

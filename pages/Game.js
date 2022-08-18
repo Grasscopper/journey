@@ -4,7 +4,7 @@ export const Game = {
       loadout: {
         primary: null,
         secondary: null,
-        support: null,
+        support: [],
         item: null,
         abilities: []
       }
@@ -23,11 +23,17 @@ export const Game = {
     removeSecondaryWeapon: (G, ctx, secondary) => {
       G.loadout.secondary = null
     },
-    setSupportWeapon: (G, ctx, support) => {
-      G.loadout.support = support
+    addSupportWeapon: (G, ctx, support) => {
+      let isEquipped = G.loadout.support.find(current => current.weaponName === support.weaponName)
+      if (isEquipped) { // support weapon already equipped
+      }
+      else {
+        G.loadout.support = [ ...G.loadout.support, support ]
+      }
     },
     removeSupportWeapon: (G, ctx, support) => {
-      G.loadout.support = null
+      const result = G.loadout.support.filter(current => current.weaponName != support.weaponName)
+      G.loadout.support = result
     },
     setItem: (G, ctx, item) => {
       G.loadout.item = item
@@ -47,18 +53,6 @@ export const Game = {
       const result = G.loadout.abilities.filter(current => current.abilityName != ability.abilityName)
       G.loadout.abilities = result
     }
-    //   team.map((currentCharacter) => {
-    //           let trust = currentCharacter.trust
-    //           if (character.id === currentCharacter.id) {
-    //             trust += 20
-    //           }
-    //           return (
-    //             {
-    //               ...currentCharacter,
-    //               trust: trust,
-    //               hearts: styleHearts(trust)
-    //             }
-    // }
   },
   phases: {
     startingPhase: {
