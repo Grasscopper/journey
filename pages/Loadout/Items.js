@@ -37,13 +37,13 @@ const Items = (props) => {
       weaponName="C. BOX (DSRT)"
       damageType="ITEM"
       ammo="2"
-      weight="0.5" />
+      weight={0.5} />
       <WeaponCard
       setWeapon={props.setItem}
       weaponName="C. BOX (RAIN)"
       damageType="ITEM"
       ammo="2"
-      weight="0.6" />      
+      weight={0.6} />      
       </div>
     </div>
   )

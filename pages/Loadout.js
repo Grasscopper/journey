@@ -113,7 +113,7 @@ const Loadout = (props) => {
                     </span>
 
                     <span style={{ marginLeft: 5, fontSize: 24 }}>
-                    <p className="title" style={{ color: "white" }}>0.0 KG</p>
+                    <p className="title" style={{ color: "white" }}>{props.G.loadout.weight} KG</p>
                     </span>
 
                   </span>
