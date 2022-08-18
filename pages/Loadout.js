@@ -64,6 +64,23 @@ const Loadout = (props) => {
     removeAbility={props.moves.removeAbility} />
   }
 
+  let movementRank = () => {
+    const weight = props.G.loadout.weight
+    if (weight <= 6.4) {
+      return "A"
+    }
+    else if (weight >= 6.5 && weight <= 10.4) {
+      return "B"
+    }
+    else if (weight >= 10.5 && weight <= 12.4) {
+      return "C"
+    }
+    else if (weight >= 12.5) {
+      return "D"
+    }
+    return "E"
+  }
+
   return (
     <div style={{ padding: 20 }}>
       <p className="title" style={{ color: "#4A4A4A"}}>LOADOUT</p>
@@ -71,7 +88,7 @@ const Loadout = (props) => {
         {menuCategories}
         <div className="column is-4 has-background-white" />
       </div>
-      <section className="hero" style={{ backgroundColor: "#03D1B2", marginBottom: 30, border: "solid" }}>
+      <section className="hero" style={{ backgroundColor: "#1F9CED", marginBottom: 30, border: "solid" }}>
           <div className="hero-body">
               <p className="title" style={{ color: "#4a4a4a" }}>
               Maki
@@ -99,7 +116,7 @@ const Loadout = (props) => {
                     </span>
 
                     <span style={{ marginLeft: 5, fontSize: 24 }}>
-                    <p className="title" style={{ color: "white" }}>B</p>
+                    <p className="title" style={{ color: "white" }}>{movementRank()}</p>
                     </span>
 
                   </span>
