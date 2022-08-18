@@ -54,7 +54,10 @@ const Loadout = (props) => {
     removeItem={props.moves.removeItem} />
   }
   else if (menuItems[4]) {
-    selectedMenu = <Abilities />
+    selectedMenu = <Abilities
+    equippedAbilities={props.G.loadout.abilities}
+    addAbility={props.moves.addAbility}
+    removeAbility={props.moves.removeAbility} />
   }
 
   return (
@@ -65,7 +68,7 @@ const Loadout = (props) => {
         <li className="is-active"><a href="/Loadout" aria-current="page">LOADOUT</a></li>
       </ul>
       </nav>
-      <div className="columns is-multiline has-background-light" style={{ cursor: "pointer" }}>
+      <div className="columns is-multiline has-background-light" style={{ cursor: "pointer", margin: 0, marginBottom: 20 }}>
         {menuCategories}
         <div className="column is-4 has-background-white" />
       </div>

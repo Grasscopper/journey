@@ -34,20 +34,30 @@ export const Game = {
     },
     removeItem: (G, ctx, item) => {
       G.loadout.item = null
+    },
+    addAbility: (G, ctx, ability) => {
+      let isEquipped = G.loadout.abilities.find(current => current.abilityName === ability.abilityName)
+      if (isEquipped) { // ability already equipped
+      }
+      else {
+        G.loadout.abilities = [ ...G.loadout.abilities, ability ]
+      }
+    },
+    removeAbility: (G, ctx, ability) => {
+      const result = G.loadout.abilities.filter(current => current.abilityName != ability.abilityName)
+      G.loadout.abilities = result
     }
-    // nextDay: (G, ctx) => {
-    //   G.time = 3
-    //   G.day++
-    // },
-    // trainAtGym: (G, ctx) => {
-    //   if (G.time > 0) {
-    //     G.player = {
-    //       ...G.player,
-    //       attack: G.player.attack + 1
-    //     }
-    //     // G.player.attack++;
-    //     G.time--;
-    //   }
+    //   team.map((currentCharacter) => {
+    //           let trust = currentCharacter.trust
+    //           if (character.id === currentCharacter.id) {
+    //             trust += 20
+    //           }
+    //           return (
+    //             {
+    //               ...currentCharacter,
+    //               trust: trust,
+    //               hearts: styleHearts(trust)
+    //             }
     // }
   },
   phases: {
