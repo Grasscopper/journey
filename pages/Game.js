@@ -6,6 +6,8 @@ export const Game = {
         secondary: null,
         support: [],
         item: null,
+        equipmentHead: null,
+        equipmentBody: null,
         abilities: [],
         weight: 0.0
       }
@@ -111,6 +113,62 @@ export const Game = {
         weight: G.loadout.weight - item.weight
       }
       G.loadout.item = null
+    },
+    setHead: (G, ctx, head) => {
+      if (G.loadout.equipmentHead === null) {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + head.weight
+        }
+      }
+      else {
+        if (G.loadout.equipmentHead.equipmentName !== head.equipmentName) {
+          G.loadout = {
+            ...G.loadout,
+            weight: G.loadout.weight - G.loadout.head.weight
+          }
+          G.loadout = {
+            ...G.loadout,
+            weight: G.loadout.weight + head.weight
+          }
+        }
+      }
+      G.loadout.equipmentHead = head
+    },
+    removeHead: (G, ctx, head) => {
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - head.weight
+      }
+      G.loadout.equipmentHead = null
+    },
+    setBody: (G, ctx, body) => {
+      if (G.loadout.equipmentBody === null) {
+        G.loadout = {
+          ...G.loadout,
+          weight: G.loadout.weight + body.weight
+        }
+      }
+      else {
+        if (G.loadout.equipmentBody.equipmentName !== body.equipmentName) {
+          G.loadout = {
+            ...G.loadout,
+            weight: G.loadout.weight - G.loadout.body.weight
+          }
+          G.loadout = {
+            ...G.loadout,
+            weight: G.loadout.weight + body.weight
+          }
+        }
+      }
+      G.loadout.equipmentBody = body
+    },
+    removeBody: (G, ctx, body) => {
+      G.loadout = {
+        ...G.loadout,
+        weight: G.loadout.weight - body.weight
+      }
+      G.loadout.equipmentBody = null
     },
     addAbility: (G, ctx, ability) => {
       let isEquipped = G.loadout.abilities.find(current => current.abilityName === ability.abilityName)

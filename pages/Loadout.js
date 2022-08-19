@@ -3,6 +3,7 @@ import PrimaryWeapons from "./Loadout/PrimaryWeapons"
 import SecondaryWeapons from "./Loadout/SecondaryWeapons"
 import SupportWeapons from "./Loadout/SupportWeapons"
 import Items from "./Loadout/Items"
+import Equipment from "./Loadout/Equipment"
 import Abilities from "./Loadout/Abilities"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
@@ -10,10 +11,10 @@ import { faRunning } from '@fortawesome/free-solid-svg-icons'
 import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 const Loadout = (props) => {
-  const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Abilities"]
-  const [menuItems, setMenuItems] = useState([1,0,0,0,0])
+  const names = ["Primary Weapons", "Secondary Weapons", "Support Weapons", "Items", "Equipment", "Abilities"]
+  const [menuItems, setMenuItems] = useState([1,0,0,0,0,0])
   let menuCategories = menuItems.map((menuItem, index) => {
-    let selectedItem = [0,0,0,0,0]
+    let selectedItem = [0,0,0,0,0,0]
     selectedItem[index] = 1
     if (menuItem === 1) {
       return (
@@ -33,6 +34,7 @@ const Loadout = (props) => {
   equippedPrimaryWeapon={props.G.loadout.primary}
   setPrimaryWeapon={props.moves.setPrimaryWeapon}
   removePrimaryWeapon={props.moves.removePrimaryWeapon} />
+
   if (menuItems[0]) {
     selectedMenu = <PrimaryWeapons
     equippedPrimaryWeapon={props.G.loadout.primary}
@@ -58,6 +60,15 @@ const Loadout = (props) => {
     removeItem={props.moves.removeItem} />
   }
   else if (menuItems[4]) {
+    selectedMenu = <Equipment
+    equipmentHead={props.G.loadout.equipmentHead}
+    setHead={props.moves.setHead}
+    removeHead={props.moves.removeHead}
+    equipmentBody={props.G.loadout.equipmentBody}
+    setBody={props.moves.setBody}
+    removeBody={props.moves.removeBody} />
+  }
+  else if (menuItems[5]) {
     selectedMenu = <Abilities
     equippedAbilities={props.G.loadout.abilities}
     addAbility={props.moves.addAbility}
