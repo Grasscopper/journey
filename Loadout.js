@@ -77,7 +77,10 @@ const Loadout = (props) => {
 
   let movementRank = () => {
     const weight = props.G.loadout.weight
-    if (weight <= 6.4) {
+    if (weight <= 3.4) {
+      return "S"
+    }
+    else if (weight >= 3.5 && weight <= 6.4) {
       return "A"
     }
     else if (weight >= 6.5 && weight <= 10.4) {
