@@ -76,7 +76,7 @@ const Loadout = (props) => {
   }
 
   let movementRank = () => {
-    const weight = props.G.loadout.weight
+    const weight = parseFloat(props.G.loadout.weight).toFixed(1)
     if (weight <= 3.4) {
       return "S"
     }
