@@ -59,24 +59,36 @@ const Equipment = (props) => {
           setEquipment={props.setHead}
           equipmentName="Gas Mask"
           equipmentDescription="Nullify the effects of sleep grenades."
-          weight={2} />
+          weight={0.9} />
+        <EquipmentCard
+          type="HEAD"
+          setEquipment={props.setHead}
+          equipmentName="Head Plate"
+          equipmentDescription="Nullify damage against a single headshot."
+          weight={0.9} />
         <EquipmentCard
           type="HEAD"
           setEquipment={props.setHead}
           equipmentName="Scarf and Goggles"
           equipmentDescription="Increase visibility during sandstorms."
-          weight={1.1} />
+          weight={0.9} />
         <EquipmentCard
           type="BODY"
           setEquipment={props.setBody}
-          equipmentName="Body Armor"
+          equipmentName="Battle Dress"
           equipmentDescription="Increase defense against bullets."
           weight={4} />
         <EquipmentCard
           type="BODY"
           setEquipment={props.setBody}
           equipmentName="Sneaking Suit"
-          equipmentDescription="Decrease footstep noises and nullify NVG detection at the cost of increased visibility."
+          equipmentDescription="Decrease footstep noises."
+          weight={3.4} />
+        <EquipmentCard
+          type="BODY"
+          setEquipment={props.setBody}
+          equipmentName="OctoCamo"
+          equipmentDescription="Increase your camo index in all environments."
           weight={3.4} />
       </div>
     </div>
