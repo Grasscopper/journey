@@ -105,25 +105,8 @@ const Loadout = (props) => {
       </div>
       <section className="hero" style={{ backgroundColor: "#1F9CED", marginBottom: 30, border: "solid" }}>
           <div className="hero-body">
-              <p className="title" style={{ color: "#4a4a4a" }}>
-              Maki
-              </p>
               <div className="columns">
-                <div className="column is-4">
-                  <span className="icon-text">
-
-                    <span>
-                    <FontAwesomeIcon icon={faHeart} style={{ color: "white", height: 28, width: 28, marginTop: 4}} />
-                    </span>
-
-                    <span style={{ marginLeft: 5, fontSize: 24 }}>
-                    <p className="title" style={{ color: "white" }}>100</p>
-                    </span>
-
-                  </span>
-                </div>
-
-                <div className="column is-4">
+                <div className="column is-6">
                   <span className="icon-text">
 
                     <span>
@@ -137,7 +120,7 @@ const Loadout = (props) => {
                   </span>
                 </div>
 
-                <div className="column is-4">
+                <div className="column is-6">
                   <span className="icon-text">
 
                     <span>

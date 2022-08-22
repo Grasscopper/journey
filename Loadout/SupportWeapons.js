@@ -101,6 +101,12 @@ const SupportWeapons = (props) => {
       damageType="SPC"
       ammo="2"
       weight={1.0} />
+      <WeaponCard
+      setWeapon={props.addSupportWeapon}
+      weaponName="SLEEP GRENADE"
+      damageType="ZZZ"
+      ammo="3"
+      weight={1.5} />      
       </div>
     </div>
   )

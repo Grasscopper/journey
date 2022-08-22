@@ -40,10 +40,34 @@ const Items = (props) => {
       weight={0.5} />
       <WeaponCard
       setWeapon={props.setItem}
+      weaponName="C. BOX (FRST)"
+      damageType="ITEM"
+      ammo="2"
+      weight={0.5} />
+      <WeaponCard
+      setWeapon={props.setItem}
       weaponName="C. BOX (RAIN)"
       damageType="ITEM"
       ammo="2"
-      weight={0.6} />      
+      weight={0.5} />
+      <WeaponCard
+      setWeapon={props.setItem}
+      weaponName="NVG"
+      damageType="ITEM"
+      ammo="100%"
+      weight={0.8} />
+      <WeaponCard
+      setWeapon={props.setItem}
+      weaponName="STEALTH CAMO"
+      damageType="ITEM"
+      ammo="100%"
+      weight={1.2} />
+      <WeaponCard
+      setWeapon={props.setItem}
+      weaponName="STEALTH CAMO V2"
+      damageType="ITEM"
+      ammo="120%"
+      weight={1.5} />
       </div>
     </div>
   )

@@ -125,7 +125,7 @@ export const Game = {
         if (G.loadout.equipmentHead.equipmentName !== head.equipmentName) {
           G.loadout = {
             ...G.loadout,
-            weight: G.loadout.weight - G.loadout.head.weight
+            weight: G.loadout.weight - G.loadout.equipmentHead.weight
           }
           G.loadout = {
             ...G.loadout,
@@ -153,7 +153,7 @@ export const Game = {
         if (G.loadout.equipmentBody.equipmentName !== body.equipmentName) {
           G.loadout = {
             ...G.loadout,
-            weight: G.loadout.weight - G.loadout.body.weight
+            weight: G.loadout.weight - G.loadout.equipmentBody.weight
           }
           G.loadout = {
             ...G.loadout,
