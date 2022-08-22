@@ -58,10 +58,10 @@ const SecondaryWeapons = (props) => {
           weight={1.2} />
         <WeaponCard
           setWeapon={props.setSecondaryWeapon}
-          weaponName="Sz.-336 SMG"
+          weaponName="URAGAN-5"
           damageType="DMG"
-          ammo="20/60"
-          weight={2.6} />
+          ammo="5/15"
+          weight={2.0} />
         <WeaponCard
           setWeapon={props.setSecondaryWeapon}
           weaponName="MACHT 37"
